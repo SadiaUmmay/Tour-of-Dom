@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <HEader><h1>This is my header</h1></HEader>
+    <main>
+        <h1>Welcome to my Dom</h1>
+        <ul>
+            <li>Shafayet</li>
+            <li>Shayet</li>
+            <li>Shafa</li>
+        </ul>
+    </main>
+    <script>
+        console.log('hello from javascript')
+        console.log('Document Object Model')
+        const student = {
+            name:'abul',
+            id: 123,
+            study: function(subject){
+                console.log('studing subject :' ,subject)
+            }
+        }
+
+        // document.getElementsByTagName
+
+        const liCollection = document.getElementsByTagName('li');
+        console.log(liCollection)
+        for (const li of liCollection){
+            console.log(li.innerText)
+        }
+
+        // all h1 tags 
+
+    const allHeadings = document.getElementsByTagName('h1');
+    for (const heading of allHeadings){
+        console.log(heading.innerText)
+    }
+    </script>
+    <script src="./js/hello.js"></script>
+</body>
+</html>
