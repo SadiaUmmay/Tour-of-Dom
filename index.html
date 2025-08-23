@@ -21,8 +21,14 @@
         <h1>This is my header</h1>
     </HEader>
     <main>
-        <section>
-            <h1>Welcome to my Dom</h1>
+        <section id="old-dhaka" class="songs">
+            <h1>Welcome to my dom</h1>
+            <p>
+                Lorem ipsum dolor, <span> oli goli</span> sit amet consectetur adipisicing elit. Odio vel consequatur corrupti suscipit debitis quae quisquam temporibus unde quia sapiente. Impedit <span>more text</span> dicta illo cupiditate deleniti inventore tempore, placeat consectetur libero!
+            </p>
+            <h1>
+                habijabi <span>some text</span>
+            </h1>
             <ul>
                 <li>Shafayet</li>
                 <li class="foreign">Shayet</li>
@@ -66,7 +72,7 @@
             // console.log(heading.innerText)
         }
 
-        // get by id 
+        // get element by id 
 
         const foodTitleH1 = document.getElementById('food-title');
         console.log(foodTitleH1.innerText)
@@ -75,17 +81,24 @@
 
         foodTitleH1.innerText = 'food i want to eat'
 
-        //  get by class
+        //  get element by class
 
         const foreignElements = document.getElementsByClassName('foreign');
         console.log(foreignElements)
-        
+
         for (const element of foreignElements){
             console.log(element.innerText)
+        }
+
+        // query selector all
+
+        const spanElements = document.querySelectorAll('#old-dhaka p span')
+        for (const element  of spanElements){
+            console.log(element)
         }
 
     </script>
     <script src="./js/hello.js"></script>
 </body>
-
+ 
 </html>
