@@ -1,46 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    h1 {
+        color: aqua;
+    }
+
+    #food-title {
+        color: blueviolet;
+    }
+</style>
+
 <body>
-    <HEader><h1>This is my header</h1></HEader>
+    <HEader>
+        <h1>This is my header</h1>
+    </HEader>
     <main>
-        <h1>Welcome to my Dom</h1>
-        <ul>
-            <li>Shafayet</li>
-            <li>Shayet</li>
-            <li>Shafa</li>
-        </ul>
+        <section>
+            <h1>Welcome to my Dom</h1>
+            <ul>
+                <li>Shafayet</li>
+                <li class="foreign">Shayet</li>
+                <li>Shafa</li>
+            </ul>
+        </section>
+        <section>
+            <h1 id="food-title">Foods I love</h1>
+            <ul>
+                <li>rice</li>
+                <li class="foreign">bhat</li>
+                <li>fish</li>
+                <li>pasta</li>
+                <li class="foreign">burger</li>
+            </ul>
+        </section>
     </main>
     <script>
-        console.log('hello from javascript')
-        console.log('Document Object Model')
+        // console.log('hello from javascript')
+        // console.log('Document Object Model')
         const student = {
-            name:'abul',
+            name: 'abul',
             id: 123,
-            study: function(subject){
-                console.log('studing subject :' ,subject)
+            study: function (subject) {
+                console.log('studing subject :', subject)
             }
         }
 
         // document.getElementsByTagName
 
         const liCollection = document.getElementsByTagName('li');
-        console.log(liCollection)
-        for (const li of liCollection){
-            console.log(li.innerText)
+        // console.log(liCollection)
+        for (const li of liCollection) {
+            // console.log(li.innerText)
         }
 
         // all h1 tags 
 
-    const allHeadings = document.getElementsByTagName('h1');
-    for (const heading of allHeadings){
-        console.log(heading.innerText)
-    }
+        const allHeadings = document.getElementsByTagName('h1');
+        for (const heading of allHeadings) {
+            // console.log(heading.innerText)
+        }
+
+        // get by id 
+
+        const foodTitleH1 = document.getElementById('food-title');
+        console.log(foodTitleH1.innerText)
+
+        // jevabe id text paltabo 
+
+        foodTitleH1.innerText = 'food i want to eat'
+
+        //  get by class
+
+        const foreignElements = document.getElementsByClassName('foreign');
+        console.log(foreignElements)
+        
+        for (const element of foreignElements){
+            console.log(element.innerText)
+        }
+
     </script>
     <script src="./js/hello.js"></script>
 </body>
+
 </html>
