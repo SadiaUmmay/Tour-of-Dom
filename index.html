@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <style>
     h1 {
@@ -16,7 +17,7 @@
         /* background-color: bisque; */
     }
     .bg-red{
-        background-color: red;
+        background-color: rgb(147, 119, 119);
 
     }
 </style>
@@ -40,7 +41,7 @@
                 <li>Shafa</li>
             </ul>
         </section>
-        <section>
+        <section class="food">
             <h1 id="food-title">Foods I love</h1>
             <ul>
                 <li>rice</li>
@@ -48,6 +49,15 @@
                 <li>fish</li>
                 <li>pasta</li>
                 <li class="foreign">burger</li>
+            </ul>
+        </section>
+        <section id="players-container">
+            <h1>players</h1>
+            <ul>
+                <li>neymar</li>
+                <li>messi</li>
+                <li>ronaldo</li>
+                <li>mbappe</li>
             </ul>
         </section>
     </main>
@@ -58,7 +68,7 @@
             name: 'abul',
             id: 123,
             study: function (subject) {
-                console.log('studing subject :', subject)
+                // console.log('studing subject :', subject)
             }
         }
 
@@ -80,7 +90,13 @@
         // get element by id 
 
         const foodTitleH1 = document.getElementById('food-title');
-        console.log(foodTitleH1.innerText)
+        // console.log(foodTitleH1.innerText)
+        // css jevabe paltabo
+        // foodTitleH1.style.backgroundColor='red'
+        foodTitleH1.style.color='white'
+        // foodTitleH1.classList.add('bg-red')
+
+
 
         // jevabe id text paltabo 
 
@@ -89,21 +105,24 @@
         //  get element by class
 
         const foreignElements = document.getElementsByClassName('foreign');
-        console.log(foreignElements)
+        // console.log(foreignElements)
 
         for (const element of foreignElements){
-            console.log(element.innerText)
+            // console.log(element.innerText)
         }
 
         // query selector all
 
         const spanElements = document.querySelectorAll('#old-dhaka p span')
         for (const element  of spanElements){
-            console.log(element)
+            // console.log(element)
         }
+
+        
 
     </script>
     <script src="./js/hello.js"></script>
+    <script src="/js/cssInJs.js"></script>
 </body>
  
 </html> 
